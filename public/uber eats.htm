@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>document</title>
+  <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+  <style>
+    .firstImg {
+      background-image: url("/public/images/food.jpeg");
+      background-size: cover;
+      height: 100vh;
+      width: 98.3vw;
+    }
+
+    .btnLogin {
+      margin-top: 24px;
+      height: 40px;
+    }
+
+    .row {
+      padding-top: 400px;
+    }
+    .mainHeading{
+      margin-top: 30px;
+      margin-left: -170px;
+    }
+    .emailAddress {
+      width: 700px;
+      height: 60px;
+      font-size: 20px;
+      margin-left: -170px;
+    }
+    .link{
+      margin-left: -170px;
+    }
+    .btnDeliver {
+      height: 60px;
+      width: 190px;
+      font-size: 19px;
+    }
+
+    .btnFind {
+      font-size: 30px;
+      margin-bottom: 9px;
+    }
+
+    .shortImages {
+      margin-top: 100px;
+      margin-left: 60px;
+      background-size: cover;
+      gap: 30px;
+      margin-left: 50px;
+    }
+
+    .cityName {
+      margin-top: 120px;
+      margin-left: 50px;
+    }
+
+    h5 {
+      font-size: 60px;
+      margin-bottom: -55px;
+    }
+
+    .mapImage {
+      margin-left: -300px;
+      margin-top: 50px;
+    }
+
+    .citiesName {
+      display: grid;
+      grid-template-columns: 3fr 3fr 3fr 3fr;
+      padding-top: 70px;
+      margin-left: 50px;
+      font-size: 25px;
+    }
+
+    a {
+      color: black;
+      font-size: 20px;
+
+    }
+
+    .secondName {
+      padding-top: 100px;
+    }
+
+    .countriesName {
+      display: grid;
+      grid-template-columns: 3fr 3fr 3fr 3fr;
+      padding-top: 70px;
+      margin-left: 50px;
+      font-size: 25px;
+    }
+
+    .uberEats {
+      display: grid;
+      grid-template-columns: 5fr 3fr 4fr;
+      margin-top: 60px;
+    }
+
+    .playStore {
+      margin-bottom: -300px;
+    }
+
+    .uberNames {
+      font-size: 20px;
+      padding-left: 150px;
+    }
+
+    .lastIcons {
+      display: grid;
+      grid-template-columns: 5fr 8fr;
+      margin-top: 50px;
+    }
+
+    .icon {
+      font-size: 30px;
+    }
+    .textLast{
+      display: flex;
+      column-gap: 20px;
+      font-size: 20px;
+      margin-left: 600px;
+      font-size: 15px;
+    }
+    .textLast1{
+      margin-left: 960px;
+      font-size: 15px;
+      display: flex;
+      font-size: 15px;
+      gap: 70px;
+      margin-bottom: 100px;
+    }
+  </style>
+</head>
+
+<body class="container-fluid">
+  <div class="firstImg">
+    <div class="float-start">
+      <nav class="navbar-toggler" type="button" data-toggle="collapse">
+        <span class="navbar-toggler-icon"></span>
+      </nav>
+      <h2 style='color: white; font-size: 45px;' class="ms-4"> Uber Eats</h2>
+    </div>
+    <div class="d-flex float-end">
+      <button class="border border-rounded float-end btnLogin"><span class="bi bi-person-fill"></span> Log in</button>
+      <button class="btn btn-dark position-relative m-4 btn btn-rounded">Sign up</button>
+    </div>
+    <div class="row">
+      <div class="mainHeading" style="color: white; font-size: 70px;">
+        Order food to your door
+      </div>
+      <div class="mt-4">
+        <div class="dropdown">
+          <input type="text" placeholder="Enter delevery address" class="emailAddress">
+          <button class="btnDeliver dropdown-toggle" data-bs-toggle="dropdown"><span class="bi bi-clock-fill"> </span>&nbsp; Deliver now &nbsp; <span
+              class="bi bi-chevron-down"></span></button>
+              <ul class="dropdown-menu ">
+                <li class="dropdown-item"><span class="bi bi-clock-fill"></span>&nbsp; Deliver now</li>
+                <li class="dropdown-item"><span class="bi bi-calendar2-date-fill">&nbsp; Schedule for later</span></li>
+              </ul>              
+          <button class="btn btn-dark btnFind">Find Food</button>
+        </div>
+      </div>
+      <h5 style="color: white; font-size: 25px;">
+        <a href="#" style="color: white;" class="link">Sign in</a> for your recent address
+      </h5>
+    </div>
+  </div>
+  <!--images-->
+  <div class="shortImages d-flex">
+    <div class="imgsFirst">
+      <img src="/public/images/feedimg.webp" width="450px">
+      <h1>Feed your employees</h1>
+      <a href="#" style="font-size: 25px; color: black;">Create a business account</a>
+    </div>
+    <div class="imgSecond">
+      <img src="/public/images/rest.jpg" width="450px">
+      <h1>Your restaurant, delivered</h1>
+      <a href="#" style="font-size: 25px; color: black;">Add your restaurant</a>
+    </div>
+    <div class="imgThird">
+      <img src="/public/images/deliveruber.webp" width="450px">
+      <h1>Deliver with Uber Eats</h1>
+      <a href="#" style="font-size: 25px; color: black;">Sign up to deliver</a>
+    </div>
+  </div>
+
+  <!--cityImages-->
+
+  <div class="cityName">
+    <h5>Cities near me</h5>
+    <a href="#" style="font-size: 25px; color: black;" class="float-end me-4">view all 500+ cities</a>
+  </div>
+  <img src="/public/images/map.png" class="mapImage">
+  <!--cities Name-->
+  <div class="citiesName">
+    <div>
+      <div>
+        Akron
+      </div>&nbsp;
+      <div>
+        Albuquerque
+      </div>&nbsp;
+      <div>
+        Bridgeport
+      </div>&nbsp;
+      <div>
+        Concord
+      </div>&nbsp;
+      <div>
+        Dayton
+      </div>&nbsp;
+      <div>
+        El Paso
+      </div>&nbsp;
+    </div>
+    <div>
+      <div>Hartford</div>&nbsp;
+      <div>Houston</div>&nbsp;
+      <div>Indianapolis</div>&nbsp;
+      <div>McAllen</div>&nbsp;
+      <div>Mesa</div>&nbsp;
+      <div>Milwaukee</div>&nbsp;
+    </div>
+    <div>
+      <div>Nashville</div>&nbsp;
+      <div>New Orleans</div>&nbsp;
+      <div>Oklahoma City</div>&nbsp;
+      <div>Omaha</div>&nbsp;
+      <div>Orlando</div>&nbsp;
+      <div>Palm Bay</div>&nbsp;
+    </div>
+    <div>
+      <div>Providence</div>&nbsp;
+      <div>Queens</div>&nbsp;
+      <div>Queens</div>&nbsp;
+      <div>Stony Brook</div>&nbsp;
+      <div>Tucson</div>&nbsp;
+      <div>West Hollywood</div>&nbsp;
+    </div>
+  </div>
+  <div class="secondName">
+    <h5>Countries with Uber Eats</h5>
+    <a href="#" class="float-end">View all countries</a>
+  </div>
+  <!--Countries Name-->
+  <div class="countriesName">
+    <div>&nbsp;
+      <div>Australia</div>&nbsp;
+      <div>Belgium</div>&nbsp;
+      <div>Canada</div>&nbsp;
+      <div>Chile</div>&nbsp;
+      <div>Costa Rica</div>&nbsp;
+      <div>Dominican Republic</div>&nbsp;
+      <div>Ecuador</div>&nbsp;
+      <div>El Salvador</div>&nbsp;
+    </div>
+    <div>&nbsp;
+      <div>France</div>&nbsp;
+      <div>Germany</div>&nbsp;
+      <div>Guatemala</div>&nbsp;
+      <div>Ireland</div>&nbsp;
+      <div>Italy</div>&nbsp;
+      <div>Japan</div>&nbsp;
+      <div>Kenya</div>&nbsp;
+      <div>Mexico</div>&nbsp;
+    </div>
+    <div>&nbsp;
+      <div>Netherlands</div>&nbsp;
+      <div>New Zealand</div>&nbsp;
+      <div>Panama</div>&nbsp;
+      <div>Poland</div>&nbsp;
+      <div>Portugal</div>&nbsp;
+      <div>South Africa</div>&nbsp;
+      <div>Spain</div>&nbsp;
+      <div>Sri Lanka</div>&nbsp;
+    </div>
+    <div>&nbsp;
+      <div>Sweden</div>&nbsp;
+      <div>Sweden</div>&nbsp;
+      <div>Taiwan (ROC)</div>&nbsp;
+      <div>United Kingdom</div>&nbsp;
+      <div>United Kingdom</div>&nbsp;
+    </div>
+  </div>
+  <!--horizintal line-->
+  <hr>
+  <!--uber eats -->
+  <div class="uberEats">
+    <div>
+      <h1 style="margin-left: 50px;">Uber <b>Eats</b></h1>
+      <span style="margin-left: 50px;">
+        <img src="/public/images/aap.svg" height="50px" width="150px" class="playStore">&nbsp; &nbsp;
+        <img src="/public/images/play.png" height="50px" width="150px" class="playStore">
+      </span>
+    </div>
+    <div class="uberNames">
+      <div>Get Help</div>&nbsp;
+      <div>Buy gift cards</div>&nbsp;
+      <div>Add your restaurant</div>&nbsp;
+      <div>Sign up to deliver</div>&nbsp;
+      <div>Create a business account</div>&nbsp;
+      <div>Promotions</div>
+    </div>
+    <div class="uberNames">
+      <div>Restaurants near me</div>&nbsp;
+      <div>View all cities</div>&nbsp;
+      <div>View all countries</div>&nbsp;
+      <div>Pickup near me</div>&nbsp;
+      <div>About Uber Eats</div>&nbsp;
+      <div> <span class="bi bi-translate"></span> English</div>
+    </div>
+  </div>
+  <hr>
+  <div class="lastIcons">
+    <div class="icon">
+      <span class="bi bi-facebook"></span>
+      <span class="bi bi-twitter"></span>
+      <span class="bi bi-instagram"></span>
+    </div>
+    <div class="textLast">
+      <div>Privacy Policy</div>
+      <div>Terms</div>
+      <div>Pricing </div>
+      <div> Do not sell or share my personal information</div>
+    </div>
+      </div>
+     <div  class="textLast1">
+      <div>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+      </div>
+      <div>
+        © 2023 Uber Technologies Inc.
+      </div>
+     </div>
+  
+  <script src="/node_modules/jquery/dist/jquery.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

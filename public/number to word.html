@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+    <script>
+        function bodyload(){
+         var number= document.getElementById("txtNumber").value="";
+        }
+
+        function convertNumber(){
+            var number=document.getElementById("txtNumber").value;
+
+            let toWord="";
+
+        var ones=[ "","One","Two","Three","Four","Five","Six","Seven","Eight","Nine",];
+      var second=["Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Ninteen",];
+      var third=["Twenty","Thirty","Fourty","Fifty","Sixty","Seventy","Eighty","Ninty",];
+
+            if(number==0){
+                toWord=document.write("Zero").fontcolor("green");
+               
+            }
+            
+            else if(number<10){
+                toWord=document.write=(`${ones[number]}`).fontcolor("green");
+            }
+
+            else if(number<20){
+                toWord=document.write=(`${second[number-10]}`).fontcolor("green");
+            }
+            else if(number<100){
+                var hundred=(number%10);
+                toWord=document.write=(`${third[(((number-hundred)/10)-2)]} ${ones[hundred]}`).fontcolor("green");
+            }else if(number<1000){
+                var hundred=(number%100);
+                if(hundred<20){
+                    toWord=document.write=(`${ones[number-hundred/100]}Hundred ${ones[hundred]}`).fontcolor("green");
+                }else{
+                    toWord=document.write=(`${ones[(number-hundred)/100]} Hundred ${third[Math.trunc((hundred/10)-2)]} ${ones[((hundred%10))]}`).fontcolor("green");
+                
+                }
+            }else{
+                toWord=document.write=("Please Enter Below 1000 Thank You").fontcolor("red");
+            }
+
+            document.getElementById("txt").innerHTML=toWord;
+            } 
+        
+        
+        function convertnumberToWords(){
+            convertNumber();
+        }
+
+    </script>
+    <style>
+        p{
+            margin-right: 300px;
+            margin-top: 50px;
+        }
+        div{
+            height: 300px;
+            margin-left: 250px;
+            background-image: linear-gradient(#A9F1DF → #FFBBBB);
+        }
+    </style>
+</head>
+
+<body class="container-fluid" onload="bodyload()">
+    <h1 style="font-family: 'Courier New', Courier, monospace;" class="mt-4 ms-4 text-center text-success"><marquee behavior="alternate" direction="right">Convert Number to Word </marquee></h1>
+    <div class="text-center mt-4 border w-50">
+        <label class="mt-4"><input type="number" id="txtNumber" class="form-control"></label>
+        <button class="btn btn-warning ms-4" onclick="convertnumberToWords()">Convert</button>
+        <p id="txt">Converted Number :- </p>
+    </div>
+</body>
+</html>

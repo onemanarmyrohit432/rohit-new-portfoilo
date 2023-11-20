@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recently view</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        header {
+            display: flex;
+            justify-content: space-around;
+            background-color: cyan;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+        img{
+            width: 80px;
+            height: 80px;
+            margin-top: 10px;
+        }
+        a{
+            color: black;
+            text-decoration:none ;
+        }
+    </style>
+
+    <script>
+        function RecentlyClick(){
+            var list=document.getElementById("list");
+            switch(location.hash){
+                case "#home":
+                    var now= new Date();
+                    list.innerHTML +="You are viewing Home<br>" + now.toLocaleTimeString() + "<br>";
+                    break;
+                case "#men":
+                var now= new Date();
+                    list.innerHTML +="You are viewing Men's Faishon <br>" + now.toLocaleTimeString() + "<br>";
+                    break;
+                case "#women":
+                var now= new Date();
+                    list.innerHTML +="You are viewing Women's Faishon <br>" + now.toLocaleTimeString() + "<br>";
+                    break;
+                case "#kid":
+                var now= new Date();
+                    list.innerHTML +="You are viewing kid's Faishon <br>" + now.toLocaleTimeString() + "<br>";
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h2 style="margin-top: 40px;">Shopper</h2>
+        <div>
+            <a href=""><img style="width: 120px;height: 120px;" src="/public/images/kid.jpg"></a>
+            <a href=""><img style="width: 120px;height: 120px;" src="/public/images/mens.jpg"></a>
+            <a href=""><img style="width: 120px;height: 120px;" src="/public/images/women1"></a>
+        </div>
+        <div style="margin-top: 50px;">
+            <i class="bi bi-person-fill me-2"></i>
+            <i class="bi bi-heart-fill me-2"></i>
+            <i class="bi bi-cart4 me-2"></i>
+            <i class="bi bi-truck me-2"></i>
+        </div>
+
+    </header>
+    <nav class="d-flex mb-4 mt-4">
+       <div class="ms-4 text-center" style="background-color: cyan; width: 140px; margin-top:10px;height:30px;"><a href="#home">Home</a></div>
+       <div class="ms-4 text-center" style="background-color: cyan; width: 140px; margin-top:10px;height:30px;"><a href="#men">Men's Faishon</a></div>
+       <div class="ms-4 text-center" style="background-color: cyan; width: 140px; margin-top:10px;height:30px;"><a href="#women">Women's Faishon</a></div>
+       <div class="ms-4 text-center" style="background-color: cyan; width: 140px; margin-top:10px;height:30px;"><a href="#kid">Kid's Faishon</a></div>
+       <button onclick="RecentlyClick()" class="btn btn-secondary ms-4 mt-1">Recently Viewed</button>
+       <p id="list"></p>
+    </nav>
+
+    <section class="container-fluid">
+        <div>
+             <h1 id="home" class="ms-4">Home</h1> <i class="bi bi-home"></i>
+            <p>My home is situated in the city. It is not too big nor too small, just the perfect size. My family lives in the home. It comprises of my father, mother, sister and grandparents. We live in our ancestral home so my home is very vintage.
+
+                It is very old but remains to be super strong. There are six rooms in my home. Each family member has a unique room which they have decorated as per their liking. For instance, my elder sister is a big fan of music, so her walls are filled with posters of musicians like BTS, RM, and more.
+                
+                Our drawing room is a large one with a high ceiling. We still use the vintage sofa set which my grandmother got as a wedding gift. Similarly, there is a vintage TV and radio which she uses till date.
+                
+                Adjoining the drawing room is my bedroom. It is my favourite room because it contains everything that I love. I have a pet guinea pig which lives in a cage in my room. We also have a storeroom which is filled with things we don’t use but also cannot discard.
+                
+                Our lawn in front of the house has a little garden. In that garden, my mother is growing her own kitchen garden. She is passionate about it and brings different seeds every month to grow them out and use them in our food.
+                
+                The fondest memories I have in a place is my terrace. Our terrace is huge with many plants. I remember all the good times we have spent there as a family. Moreover, we play there a lot when my cousins come over. Thus, every nook and corner of my home is special to me.
+                
+                Get the huge list of more than 500 Essay Topics and Ideas</p>
+        </div>
+        <div>
+            <h1 id="men" class="ms-4">Men's Faishon</h1>
+            <img class="ms-4" src="/public/images/mens.jpg" width="200px" height="200px">
+            <p>Fashion is a term that is popular among youth, old men, women, and children alike. Clothing, food, fast food, dance (on Western tunes), weddings, ceremonies, etc. have an indelible impression of fashion. Fashion is never static.
+
+                It is a transformational intoxication that speaks over the head. If a woman is wearing an old-style or design saree or lehenga, it is possible that she is labeled as “Out of Fashion”. It is also possible that he is not invited to the next kitty party.
+                
+                In today’s era, whoever becomes “out of fashion”, his “market value” falls. Therefore, he has to adopt the latest fashion items, facilities, and ideas in terms of clothing, catering, home, children, spouse, office, business, etc. to ensure himself a place in the race for materialism. Fashion is like a sheep.
+                
+                </p>
+        </div>
+        <div>
+            <h1 id="women" class="ms-4">Women's Faishon</h1>
+            <img class="ms-4" src="/public/images/women1" width="200px" height="200px">
+            <p>Fashion is a term that is popular among youth, old men, women, and children alike. Clothing, food, fast food, dance (on Western tunes), weddings, ceremonies, etc. have an indelible impression of fashion. Fashion is never static.
+
+                It is a transformational intoxication that speaks over the head. If a woman is wearing an old-style or design saree or lehenga, it is possible that she is labeled as “Out of Fashion”. It is also possible that he is not invited to the next kitty party.
+                
+                In today’s era, whoever becomes “out of fashion”, his “market value” falls. Therefore, he has to adopt the latest fashion items, facilities, and ideas in terms of clothing, catering, home, children, spouse, office, business, etc. to ensure himself a place in the race for materialism. Fashion is like a sheep.
+                
+                </p>
+        </div>
+        <div>
+            <h1 id="kid" class="ms-4">Kid's Faishon</h1>
+            <img class="ms-4" src="/public/images/kid.jpg" width="200px" height="200px">
+            <p>Fashion is a term that is popular among youth, old men, women, and children alike. Clothing, food, fast food, dance (on Western tunes), weddings, ceremonies, etc. have an indelible impression of fashion. Fashion is never static.
+
+                It is a transformational intoxication that speaks over the head. If a woman is wearing an old-style or design saree or lehenga, it is possible that she is labeled as “Out of Fashion”. It is also possible that he is not invited to the next kitty party.
+                
+                In today’s era, whoever becomes “out of fashion”, his “market value” falls. Therefore, he has to adopt the latest fashion items, facilities, and ideas in terms of clothing, catering, home, children, spouse, office, business, etc. to ensure himself a place in the race for materialism. Fashion is like a sheep.
+                
+                </p>
+        </div>
+    </section>
+</body>
+
+</html>

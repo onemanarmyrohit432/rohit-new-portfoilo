@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<script>
+  
+  var out="";
+    function GetImg(num) {
+        if (num == 1) {
+            document.getElementById("firstImg").src = "/public/images/iphone1.jpg" ;
+           
+        } else if (num == 2) {
+            document.getElementById("firstImg").src = "/public/images/iphone2.jpg" ;
+            
+        } else if (num == 3) {
+            document.getElementById("firstImg").src = "/public/images/iphone.jpg" ;
+           
+        }
+
+    }
+
+    function GoldClick(num) {
+
+        if (num == 1) {
+             out=1;
+           var http = new XMLHttpRequest();
+               http.open("get","/public/data/ajax data.txt",true);
+               http.send();
+               http.onreadystatechange=function(){
+                if(http.readyState==4){
+
+document.getElementById("Iphone").innerHTML=http.responseText;
+}
+
+               }
+        } 
+        else if (num == 2) {
+            out=2;
+            var http = new XMLHttpRequest();
+               http.open("get","/public/data/ajax demo 1.txt",true);
+               http.send();
+               http.onreadystatechange=function(){
+                if(http.readyState==4){
+
+document.getElementById("Iphone").innerHTML=http.responseText;
+}
+
+               }
+   }
+         else if (num == 3) {
+         out=3;
+            var http = new XMLHttpRequest();
+               http.open("get","/public/data/ajax demo2.txt",true);
+               http.send();
+               http.onreadystatechange=function(){
+                if(http.readyState==4){
+
+document.getElementById("Iphone").innerHTML=http.responseText;
+}
+
+               }
+        }
+
+    }
+    function ChangeImg() {
+            document.getElementById("firstImg").src = "/public/images/iphone3.jpg" ;
+    }
+
+    function OutClick(){
+        if(out==1){
+           document.getElementById("firstImg").src = "/public/images/iphone1.jpg";
+        }else if(out==2){
+            
+            document.getElementById("firstImg").src = "/public/images/iphone2.jpg" ;
+        }else if(out==3){
+            document.getElementById("firstImg").src = "/public/images/iphone.jpg" ;
+        }else{
+            document.getElementById("firstImg").src = "/public/images/iphone.jpg";
+        }
+    }
+</script>
+<style>
+    ul {
+        border: solid 10px;
+        height: 22px;
+        border-top-left-radius: 80px;
+        border-top-right-radius: 80px;
+        border-bottom-right-radius: 80px;
+        border-bottom-left-radius: 80px;
+        margin-left: 70px;
+    }
+
+    .gridItems {
+        display: grid;
+        grid-template-columns: 5fr 4fr 3fr;
+        gap: 10px;
+    
+    }
+</style>
+
+<body>
+    <div id="time"></div>
+    <marquee class="mt-4" behavior="alternate" direction="left">
+        <h1>Iphone 14 Pro</h1>
+    </marquee>
+    <div>
+        <img src="/public/images/long.png" width="100%">
+    </div>
+    <div class="gridItems" id="Iphone">
+        <div>
+            <img src="/public/images/iphone3.jpg" id="firstImg" width="400" height="400" class="mt-4 ms-4">
+            <div>
+                <a href="#ColorGold">
+                    <ul onclick="GoldClick(1)" onmouseover="GetImg(1)" onmouseout="ChangeImg()" class="btn btn-primary mt-4"
+                    style="background-color:rgb(213, 199, 120);"></ul>
+                </a>
+                <ul onclick="GoldClick(2)" onmouseover="GetImg(2)" onmouseout="ChangeImg()" class="btn btn-primary mt-4"
+                    style="background-color:silver ;"></ul>
+                <ul onclick="GoldClick(3)" onmouseover="GetImg(3)" onmouseout="ChangeImg()" class="btn btn-primary mt-4"
+                    style="background-color:black;"></ul>
+            </div>
+        </div>
+        <div>
+
+            <h1>Apple iPhone 14 Pro (128 GB) - Deep Purple</h1>
+            <a href="#">Visit the Apple Store</a>
+
+            <div>
+                4.6 &nbsp;<i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i> &nbsp; &nbsp;
+                <a href="#">699 ratings</a>
+                <hr>
+                <h1>
+                    <c class="text-danger">-8%</c> <sup>&#8377</sup>1,19,999
+                </h1>
+                <span>M.R.P : <strike>&#8377 1,29,900</strike></span>
+                <p>Inclusive of all taxes EMI starts at ₹5,818. No Cost EMI available
+                    <a href="#">EMI options</a>
+                </p>
+                <hr>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="width: 20rem;">
+                <div class="card-header row">
+                    <h4 class="col-10">With Exchange <input type="radio" class="col-2"></h4>
+                    <h6 class="text-danger">Up to &#8377 40,100.00 off</h6>
+                </div>
+                <div class="card-body">
+                    <h4>Without Exchange &nbsp; <input type="radio"></h4>
+                    <h6 class="text-danger">&#8377 119,999.00 &nbsp;<strike>&#8377 129,900.00</strike></h6>
+                    <div>
+                        <a href="#"> FREE delivery</a> Thursday, 14 September. <a href="#">Details</a>
+                    </div><br>
+
+                    <div>Or fastest delivery Wednesday, 13 September. Order within <a href="#">1 hr 6 mins. Details</a>
+                    </div>
+                    <br>
+                    <span class="bi bi-geo-alt"><a href="#">
+                            Choose location for most accurate options</a></span>
+                    <h1 class="text-success">In stock</h1>
+                    <span>Sold by <a href="#">Appario Retail Private Ltd</a> and <a href="#">Fulfilled by
+                            Amazon.</a></span>
+                    <button class="form-control btn btn-warning mt-4">Add to Cart</button>
+                    <button class="form-control btn btn-danger mt-2 mb-2">Buy Now</button>
+                    <i class="bi bi-lock-fill"><a href="#">Secure transaction</a></i>
+                    <div><input type="checkbox"> Add gift options</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

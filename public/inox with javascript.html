@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        var movie = ["select Movie", "Gadar 2", "OMG 2", "Barbee"];
+        var cinema = ["select Cinema", "INOX", "PVR", "NEXUS"];
+        var cinema2 = ["Select Cinema", "PVR", "NEXUS", "Other Cinemas"];
+        var seat = ["select Seat", "1", "2", "3", "4", "5", "6"];
+        var date = ["select Date", "25 August 2023", "26 August 2023"];
+        var time = ["select Time", "11 AM", "1 PM", "3 PM", "5 PM"];
+        var CinemaName = [];
+
+        function LoadCategories() {
+            movie.map(function (category) {
+                var option = document.createElement("option");
+                option.text = category;
+                option.value = category;
+                document.getElementById("txtMovie").appendChild(option)
+            })
+
+        }
+        function MovieChange() {
+            var movies = document.getElementById("txtMovie").value;
+            switch (movies) {
+                case "Gadar 2":
+                    CinemaName = cinema;
+                    
+                    LoadCinema();
+                    break;
+                case "OMG 2":
+                    CinemaName = cinema2;
+                    LoadCinema();
+                    break;
+                case "Barbee":
+                    CinemaName = cinema;
+                    LoadCinema();
+                    break;
+            }
+        }
+        function CinemaChange() {
+            var cinemas = document.getElementById("txtCinema").value;
+            switch (cinemas) {
+                case "INOX":
+                    CinemaName = seat;
+                    LoadSeat();
+                    break;
+                case "PVR":
+                    CinemaName = seat;
+                    LoadSeat();
+                    break;
+                case "NEXUS":
+                    CinemaName = seat;
+                    LoadSeat();
+                    break;
+                    case "Other Cinemas":
+                        CinemaName=seat;
+                        LoadSeat();
+                        break;
+
+            }
+        }
+        function ChangeSeat() {
+            var seats = document.getElementById("txtSeat").value;
+            switch (seats) {
+                case "1":
+                    CinemaName = date;
+                    LoadDate();
+                    break;
+                case "2":
+                    CinemaName = date;
+                    LoadDate();
+                    break;
+                case "3":
+                    CinemaName = date;
+                    LoadDate();
+                    break;
+                case "4":
+                    CinemaName = date;
+                    LoadDate();
+                    break;
+                case "5":
+                    CinemaName = date;
+                    LoadDate();
+                    break;
+                case "6":
+                    CinemaName = date;
+                    LoadDate();
+                    break;
+            }
+        }
+        function ChangeDate() {
+            var dates = document.getElementById("txtDate").value;
+            switch (dates) {
+                case "25 August 2023":
+                    CinemaName = time;
+                    LoadTime();
+                    break;
+                case "26 August 2023":
+                    CinemaName = time;
+                    LoadTime();
+                    break;
+            }
+        }
+        function LoadCinema() {
+            document.getElementById("txtCinema").innerHTML = "";
+            CinemaName.map(function (movies) {
+                var option = document.createElement("option");
+                option.text = movies;
+                option.value = movies;
+                document.getElementById("txtCinema").appendChild(option);
+            })
+        }
+        function LoadSeat() {
+            document.getElementById("txtSeat").innerHTML = "";
+            CinemaName.map(function (seats) {
+                var option = document.createElement("option");
+                option.text = seats;
+                option.value = seats;
+                document.getElementById("txtSeat").appendChild(option);
+            })
+        }
+        function LoadDate() {
+            document.getElementById("txtDate").innerHTML = "";
+            CinemaName.map(function (dates) {
+                var option = document.createElement("option");
+                option.text = dates;
+                option.value = dates;
+                document.getElementById("txtDate").appendChild(option);
+            })
+
+        }
+        function LoadTime() {
+            document.getElementById("txtTime").innerHTML = "";
+            CinemaName.map(function (times) {
+                var option = document.createElement("option");
+                option.text = times;
+                option.value = times;
+                document.getElementById("txtTime").appendChild(option);
+            })
+        }
+        function bodyLoad() {
+            LoadCategories();
+        }
+
+        function BookClick(){
+            var movie=document.getElementById("txtMovie").value;
+            var cinema=document.getElementById("txtCinema").value;
+            var cinema2=document.getElementById("txtCinema").value;
+            var seat=document.getElementById("txtSeat").value;
+            var date=document.getElementById("txtDate").value;
+            var time=document.getElementById("txtTime").value;
+            document.getElementById("lblMovie").innerHTML=movie;
+            document.getElementById("lblCinema").innerHTML=cinema;
+            document.getElementById("lblCinema").innerHTML=cinema2;
+            document.getElementById("lblSeat").innerHTML=seat;
+            document.getElementById("lblDate").innerHTML=date;
+            document.getElementById("lblTime").innerHTML=time;
+            document.getElementById("lblImg").innerHTML;
+            lblImg=document.getElementById("lblImg");
+            if(movie==="Gadar 2"){
+                lblImg.src="../";
+            }else if(movie=="OMG 2"){
+                lblImg.src="../images/omg 2";
+            }else{
+                lblImg.src="../images/barbee.jpg";
+            }
+        }
+
+    </script>
+    <style type="text/css">
+        .Details {
+            display: flex;
+            justify-content: space-around;
+            width: 75vw;
+            margin: 10px auto;
+          
+        }
+    </style>
+
+</head>
+
+
+<body onload="bodyLoad()">
+<img src="" alt="">
+    <button class="btn btn-success">By Movie</button>
+    <button class="btn btn-primary">By Cinema</button>
+
+
+    <main class="Details">
+        <div class="w-100 me-2">
+            <label class="form-label"> Select Movies</label>
+
+            <select id="txtMovie" name="date" onchange="MovieChange()" class="form-control"></select>
+
+        </div>
+        <div class="w-100 me-2">
+            <label class="form-label">Select Cinema</label>
+
+            <select id="txtCinema" name="Cinema" onchange="CinemaChange()" class="form-control"></select>
+
+        </div>
+
+        <div class="w-100 me-2">
+            <label class="form-label">Select Seat</label>
+
+            <select id="txtSeat" name="Seat" onchange="ChangeSeat()" class="form-control"></select>
+        </div>
+
+        <div class="w-100 me-2">
+            <label class="form-label"> Select Date</label>
+
+            <select id="txtDate" name="date" onchange="ChangeDate()" class="form-control"></select>
+
+        </div>
+
+        <div class="w-100 me-2">
+            <label class="form-label">Select Time </label>
+            <select id="txtTime" name="time" class="form-control"></select>
+        </div>
+
+        <div class="w-100 me-2 mt-4">
+            <button class="btn btn-danger w-100" type="button" data-bs-toggle="modal"
+                data-bs-target="#TicketSummary" onclick="BookClick()">Book</button>
+        </div>
+    </main>
+
+    <div class="modal fade" id="TicketSummary">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Ticket summary</h2>
+                    <button data-bs-dismiss="modal" type="button" class="btn btn-close"></button>
+                </div>
+                    <div class="modal-body">
+                        <img border="3" id="lblImg" width="150px" height="200px" >
+                        <dl>
+                            <dt>Movie</dt>
+                            <dd id="lblMovie"></dd>
+                            <dt>Cinema</dt>
+                            <dd id="lblCinema"></dd>
+                            
+                            <dt>Seat</dt>
+                            <dd id="lblSeat"></dd>
+                            <dt>Date</dt>
+                            <dd id="lblDate"></dd>
+                            <dt>Time</dt>
+                            <dd id="lblTime"></dd>
+                            
+                        </dl>
+                    </div>
+
+               
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

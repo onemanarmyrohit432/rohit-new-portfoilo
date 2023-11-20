@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change flag</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!--link flag icons to show svg Flag image -->
+
+        <!--code run for flag img-->
+
+        <!--npm install flag-icons --save -->
+
+    <link rel="stylesheet" href="/node_modules/flag-icons/css/flag-icons.css">
+    
+    <script type="text/javascript">
+
+        var countries = ["Select a Country", "India", "US", "UK"];
+        // un used lines 
+        // numberInput =["+91 and Mobile Number"];      //not use
+        // var us  = +(1);                              //not use
+        // var uk  = +(44);                             //not use
+        // var countryCode = [];                        //not use
+
+        function LoadCountry() {
+            countries.map(function (country) {
+                var option = document.createElement("option");
+                option.text = country;
+                option.value = country;
+                document.getElementById("lstCountry").appendChild(option);
+            })
+        }
+        function SelectCountry(){
+            var countryNames = document.getElementById("lstCountry").value;
+            var flag = document.getElementById("flagCountry");
+            var numberInput = document.getElementById("txtNumber");
+
+            flag.innerHTML = "";
+            numberInput.placeholder = "";
+            numberInput.value = "";
+            switch (countryNames) {
+                case "India":
+                    flag.className= "fi fi-in";
+                    numberInput.placeholder = "use +91 and then Mobile Number";
+                    break;
+                case "US":
+                    flag.className = "fi fi-us";
+                    numberInput.placeholder = "use +(1) and then(***) **** ****  Mobile Number";
+                    break;
+                case "UK":
+                    flag.className = "fi fi-gb";
+                    numberInput.placeholder = "use +(44) and then (***) **** ****  Mobile Number";
+                    break;
+                default:
+                    flag.innerHTML = "NA";
+                    flag.id = "";
+                    numberInput.placeholder = "Select Country First";
+
+                    break;
+            }
+
+
+        }
+
+        function bodyLoad() {
+            LoadCountry();
+            var countryNames = document.getElementById("lstCountry").value;
+            var flag = document.getElementById("flagCountry");
+            var numberInput = document.getElementById("txtNumber");
+            numberInput.value = "";
+            switch (countryNames) {
+                case "Select a Country":
+                    flag.innerHTML = "NA";
+                    numberInput.placeholder = "Select Country First";
+                    break;
+            }
+        }
+        // function VerifyMobile(){
+        //     var numberInput=document.getElementById("txtNumber").value;
+        //     var countryNames=document.getElementById("lstCountry").value;
+        //     var flag=document.getElementById("errormsg");
+
+        //     var mobileNumber=(/^\+\d{91}-\d{9,10}$/);
+    
+        //     if(countryNames=="India" && numberInput.match(mobileNumber)){
+        //         flag.innerHTML="Mobile Verified";
+        //     }
+        // }
+
+    </script>
+</head>
+
+<body class="d-flex justify-content-center mt-4" onload="bodyLoad()">
+    <div class="border w-25">
+        <dl class="mt-4 ms-4">
+            <dt>Country</dt>
+            
+                <div class="input-group">
+                    <select id="lstCountry" onchange="SelectCountry()" class="form-select display-inline mb-2"> </select>
+                        <div class="border border-secondary w-25 input-group-text mb-2"><span id="flagCountry"></span>
+
+                        </div>
+                </div>
+
+
+                <dt>Mobile Number</dt>
+        
+
+            <div>
+                <input type="text" class="form-control w-100" id="txtNumber" onkeyup="VerifyMobile()">
+                <div id="errormsg"></div>
+
+            </div>
+            <button class="btn btn-primary mt-4 ms-4" onclick="SubmitClick()">Submit</button>
+            <button class="btn btn-danger mt-4 ms-4" onclick="CancelClick()">Cancel</button>
+        </dl>
+    </div>
+    <div class="">
+
+    </div>
+</body>
+<script src="/node_modules/jquery/dist/jquery.js"></script>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</html>

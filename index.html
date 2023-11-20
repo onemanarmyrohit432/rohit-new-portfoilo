@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portflio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./public/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+        integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"
+        integrity="sha512-aUhL2xOCrpLEuGD5f6tgHbLYEXRpYZ8G5yD+WlFrXrPy2IrWBlu6bih5C9H6qGsgqnU6mgx6KtU8TreHpASprw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://kit.fontawesome.com/2287579d4d.js" crossorigin="anonymous"></script>
+    <!-- <script src="./public/script.js"></script> -->
+    <script src="./public/script.js"></script>
+
+    
+</head>
+<body>
+    <header class="d-flex p-2 bg-warning justify-content-between header1">
+        <div class="h1 ms-4" style="font-family: 'Autour One', cursive;">My Digital Portfolio</div>
+        <div class="mt-2" style="font-family: 'Autour One', cursive;">
+            I am a Full Stack Web Developer
+        </div>
+        <div class="me-3 mt-2">
+            <span class="bi bi-facebook me-2"></span>
+            <span class="bi bi-instagram me-2"></span>
+            <span class="bi bi-twitter me-2"></span>
+            <span class="bi bi-youtube me-2"></span>
+        </div>
+    </header>
+    <section class=" bg-dark h-100 w-100 text-white mt-4 section">
+        <button class="btn btn-danger w-100 mt-4" id="imgbtn">View Image</button>
+
+        <div class="image float-left" style="display: none;" id="img">
+
+            <div style="margin-left: 20px; padding-top: 150px;padding-left: 600px;">
+                <h3>Hello It's me</h3>
+                <button class="btn btn-light" id="hover" style="display: block;"><span
+                        class="bi bi-arrow-right-circle-fill"></span></button>
+
+                <h2 class="text-danger" id="Rohit" style="display: none;font-family: 'Autour One', cursive;">ROHIT
+                    CHAURASIYA</h2>
+                <p>I am Web Fullstack Developer</p>
+                <h4 style="color: goldenrod;font-family: 'Autour One', cursive;display: flex;"><span class="one"> HTML &nbsp;</span> |<span
+                        class="two"> CSS &nbsp;</span> | <span class="three"> Bootstrap &nbsp;</span> | <span
+                        class="four"> JavaScript &nbsp;</span> |
+                    <span class="five"> jQuery &nbsp;</span> | <span class="six"> MongoDB &nbsp;</span> | <span
+                        class="seven"> Node JS&nbsp; </span>
+                </h4>
+            </div>
+        </div>
+        <div style="justify-content: space-around;display: flex;" id="btn">
+            <button style="margin-top: 160px;" class="btn btn-primary" id="about">About Me</button>
+            <button style="margin-top: 160px;" class="btn btn-info" id="work">My Work</button>
+        </div>
+
+        <div id="buttons">
+            <h3 class="text-center mt-4 mb-4" style="display: none;" id="text">Personal Projects</h3>
+            <div class="mt-4 ms-4 me-4 justify-content-between" id="button" style="display: none;margin-top: 50px;">
+                <button class="btn btn-primary changeFlag" onclick="FlagClick()">Change Flag</button>
+                <a href="./public/shopper.html"> <button class="btn btn-secondary shopper">Shopper</button></a>
+                <a href="./public/uber eats.htm"><button class="btn btn-primary UberEats">Uber Eats</button></a>
+                <a href="./public/kfc .html"><button class="btn btn-success kfc">Kfc</button></a>
+                <a href="./public/number to word.html"><button class="btn btn-danger number">Number to Word</button></a>
+                <a href="./public/Recently view.html"> <button class="btn btn-warning Recently">Recently view</button></a>
+                <a href="../../new project/Front-page.html"><button class="btn btn-light videoLibrary">Video Library</button></a>
+                <a href="./public/inox with javascript.html"> <button class="btn btn-success Inox">Inox Movies</button></a>
+                <a href="./public/task .html"><button class="btn btn-warning Mobiles">Mobiles </button></a>
+            </div>
+        </div>
+        
+        <hr>
+       
+        <div id="aboutme">
+            <div class="ms-4" id="info" style="display: none;">
+                <div style="border: 20px solid red;border-right: none;border-bottom: none;padding-bottom: 15px;">&nbsp;
+                </div>
+                <h3 class="mb-4 name" style="font-family: 'Autour One', cursive;margin-left: 30px;"> Name :- Rohit
+                    Chaurasiya</h3>
+                <div class="bg-secondary w-75" style="margin-left: 30px;">
+                    <ol class="pt-3">
+                        <span>1. CSS</span>
+                        <li class="ms-3" style="list-style-type:square ;">Styles & Inline Style</li>
+                        <li class="ms-3" style="list-style-type:square ;">CSS Selectors</li>
+                        <li class="ms-3" style="list-style-type:square ;">CSS Box Model</li>
+                        <li class="ms-3" style="list-style-type:square ;">Border & CSS Positions</li>
+                        <li class="ms-3" style="list-style-type:square ;">Css Transforms</li>
+                        <li class="ms-3" style="list-style-type:square ;">Key Frames</li>
+                        <li class="ms-3" style="list-style-type:square ;">Media Queries</li>
+                    </ol>
+                    <ol class="pb-2">
+                        <span>2. HTML</span>
+                        <li class="ms-3" style="list-style-type:square ;">Body Semantics</li>
+                        <li class="ms-3" style="list-style-type:square ;">Ordered List & Unordered List</li>
+                        <li class="ms-3" style="list-style-type:square ;">Image IN HTML</li>
+                        <li class="ms-3" style="list-style-type:square ;">Body Semantics and Entites</li>
+                        <li class="ms-3" style="list-style-type:square ;">Hyper Links In HTML</li>
+                        <li class="ms-3" style="list-style-type:square ;">Intra documents Links</li>
+                        <li class="ms-3" style="list-style-type:square ;">Data List With Terms & Definitions</li>
+                        <li class="ms-3" style="list-style-type:square ;">Tables In HTML</li>
+                        <li class="ms-3" style="list-style-type:square ;">Forms In HTML</li>
+                    </ol>
+                    <ol class="pb-2">
+                        <span>3. BOOTSTRAP</span>
+                        <li class="ms-3" style="list-style-type:square ;">Bootstrap Container Classes</li>
+                        <li class="ms-3" style="list-style-type:square ;">Bootstrap Box Model</li>
+                        <li class="ms-3" style="list-style-type:square ;">Bootstrap Display</li>
+                        <li class="ms-3" style="list-style-type:square ;">Modals</li>
+                        <li class="ms-3" style="list-style-type:square ;">Collapse</li>
+                        <li class="ms-3" style="list-style-type:square ;">Bootstrap Accordion</li>
+                        <li class="ms-3" style="list-style-type:square ;">Bootstrap Progress & Spinners</li>
+                        <li class="ms-3" style="list-style-type:square ;">Carousel Time Intervals</li>
+                    </ol>
+                    <ol class="pt-2">
+                        <span class="name">4. JAVASCRIPT</span>
+                        <li class="ms-3" style="list-style-type:square ;">Data Types & Structure</li>
+                        <li class="ms-3" style="list-style-type:square ;">Statements</li>
+                        <li class="ms-3" style="list-style-type:square ;">Functions</li>
+                        <li class="ms-3" style="list-style-type:square ;">Class</li>
+                        <li class="ms-3" style="list-style-type:square ;">Javascript String Handling</li>
+                        <li class="ms-3" style="list-style-type:square ;">Array Methos & Property</li>
+                    </ol>
+                    <ol class="pb-2">
+                        <span class="name">5. BACKEND</span>
+                        <li class="ms-3" style="list-style-type:square ;">MongoDB</li>
+                        <li class="ms-3" style="list-style-type:square ;">NodeJS</li>
+                        <li class="ms-3" style="list-style-type:square ;">ExpressJS</li>
+                    </ol>
+                </div>
+                <h2 class="ps-4">FLUENT LANGUAGES</h2>
+                <li class="bg-secondary w-75 ms-4 ps-2" style="list-style-type:square ;">English & Hindi</li>
+
+                <h2 class="ps-4">PERSONAL DETAILS</h2>
+                <li class="bg-secondary w-75 ms-4 ps-2" style="list-style-type:square ;">Date of Birth :- 14/08/2002
+                </li>
+            </div>
+            <div id="Myinfo" style="display: none;" class="me-3">
+                <div class="text-center" style="padding-left: 400px;">
+                    <span style="padding-right:245px;">Email ID :- chaurasiyarohit783@gmail.com</span>
+                    <label> Address :- Ravi Narayan Reddi Nagar Mahadevpuram Kukatpally Hyderabaad </label>
+                    <div style="padding-right: 365px;">Phone No :- 7985294372 </div>
+                </div>
+                <div class="bg-light text-dark">
+                    <div>
+                        <h1 class="text-danger ms-4 pt-2">About Me</h1>
+                        <p class="ms-4 ms-4">I am B.com student Passed Form Maharana Pratap Degree Collage (2023) , I am
+                            a Freshers, I would like to be a part of your organization where I can exhibit the best of
+                            my ability any contribute towards your organizationnal development.</p>
+                    </div>
+                    <hr class="mt-4 mb-4 ms-4">
+                    <div>
+                        <h1 class="text-danger ms-4">CAREER OBJECTIVE</h1>
+                        <p class="me-4 ms-4">To join and work in your organization with Ui Full Stack Development which
+                            offers the challenges and growth opportunities , scope to learn new ideas and design to
+                            enrich my knowledge and skill while contributing my best to the organization.</p>
+                    </div>
+                    <hr class="mt-4 mb-4 ms-4">
+                    <div>
+                        <h1 class="text-danger ms-4 mb-4">WORK EXPERIENCE (Personal Projects)</h1>
+                        <p class="me-4 ms-4 text-danger">1. ONLINE SHOPPING APPLICATION</p>
+                        <p class="me-4 ms-4">Understanding how to design a shopping online application that allows
+                            customers to browser, filter , short products and create a custom shopping cart.</p>
+                        <p class="me-4 ms-4 text-danger">2. ONLINE VIDEO TUTORIAL LIBRARY</p>
+                        <p class="me-4 ms-4">Understanding how to design a Video Library Like YouTube application that
+                            allow admin to upload modify and delete videos. And User can watch videos after register and
+                            login</p>
+                        <p class="me-4 ms-4 text-danger">Technologies Used:</p>
+                        <p class="me-4 ms-4">Front End :- HTML,CSS,JavaScript,jQuery</p>
+                        <p class="me-4 ms-4">Backend :- NodeJS, ExpressJS and MongoDB</p>
+                    </div>
+                    <hr class="mb-4 ms-4 mt-4">
+                    <div>
+                        <h1 class="text-danger ms-4 mb-4">EDUCATION</h1>
+
+                        <p class="me-4 ms-4 fw-bold">JUNIOR SECONDARY (10 <sup>th)</sup></p>
+                        <p class="me-4 ms-4">School Name :- Saraswati Shishu Mandir Pakkibag Gorakhpur, UP</p>
+                        <p class="me-4 ms-4"> Passing Year :- 2018</p>
+                        <p class="me-4 ms-4">Marks Obtained:- 68%</p>
+                        <p class="me-4 ms-4">City:- Gorakhpur , Dist:- Gorakhpur , State:- UP</p>
+
+                        <p class="me-4 ms-4 fw-bold">SENIOR SECONDARY (12 <sup>th)</sup></p>
+                        <p class="me-4 ms-4">School Name :- Saraswati Shishu Mandir Pakkibag Gorakhpur, UP</p>
+                        <p class="me-4 ms-4"> Passing Year :- 2020</p>
+                        <p class="me-4 ms-4">Marks Obtained:- 62%</p>
+                        <p class="me-4 ms-4">City:- Gorakhpur , Dist:- Gorakhpur , State:- UP</p>
+
+                        <p class="me-4 ms-4 fw-bold">Bachelor of Commerce (B.com)</p>
+                        <p class="me-4 ms-4">College Name :Maharana Prata Degree collage Gorakhpur, UP</p>
+                        <p class="me-4 ms-4"> Passing Year :- 2023</p>
+                        <p class="me-4 ms-4">Marks Obtained:- 62%</p>
+                        <p class="me-4 ms-4">City:- Gorakhpur , Dist:- Gorakhpur , State:- UP</p>
+                    </div>
+                    <hr class="mb-4 ms-4 mt-4 fw-bold">
+                    <h1 class="text-danger ms-4 mb-4">DECLERATION</h1>
+                    <p class="me-4 ms-4">I hereby affirm that the infromation provided in this form is ture & correct to
+                        the best of my khowledge.</p>
+                    &nbsp;
+                    <div class="ms-4 mb-4">
+                        Date :-
+                        <span style="float:right;" class="me-4 pb-4">Place :- Hyderabaad</span>
+                    </div>
+                    <hr>
+                </div>
+                <div style="border: 15px solid red;border-top:none;border-left: none;width: 400px;float: right;">&nbsp;
+                </div>
+            </div>
+        </div>
+    
+    </section>
+    <div id="Flag" style="width: 100%;" class="mt-4">
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title text-danger">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> chaurasiyarohit783@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> 7985294372</p>
+                    <div class="socila-icons">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/home"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="/public/images/Rohit Chaurasiy resume Pdf.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright @ 2023 . Made by <i class="fa-solid fa-heart"></i> Rohit Chaurasiya</p>
+        </div>
+    </div>
+</body>
+
+</html>
