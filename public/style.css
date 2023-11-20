@@ -1,4 +1,7 @@
   
+        body{
+            padding: 0;
+        }
         .image{
             background-image: url(./images/WhatsApp_Image_2023-09-14_at_09.48.01-removebg-preview.png);
             width: 100%;
