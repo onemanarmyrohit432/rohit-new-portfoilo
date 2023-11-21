@@ -227,6 +227,19 @@
     color: #ff004f;
     transform: translateY(-5px);
 }
+.socila-icons1 a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #262626;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.socila-icons1 a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+    text-shadow: 0 0 10px black, 0 0 20px black, 0 0 20px black;
+}
 .btn.btn2{
     margin-top: 50px;
      display: inline-block;
