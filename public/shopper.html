@@ -647,7 +647,7 @@
             margin-right: 10px;
         }
 
-        h2 {
+        .discover{
             text-align: center;
             font-size: 25px;
             margin-top: 100px;
@@ -827,12 +827,14 @@
 
         .foot1 {
             color: white;
+            margin-top: -50px;
         }
 
-        .shooper {
-            margin-right: 1100px;
-            font-size: 50px;
-            margin-bottom: -500px;
+       .foot1 h2{
+            margin-top: 100px;
+            margin-left: 150px;
+            font-size: 40px;
+            margin-bottom: 100px;
         }
 
         .icon5 {
@@ -840,11 +842,51 @@
             margin-left: 150px;
             font-size: 25px;
             word-spacing: 20px;
-            margin-top: 550px;
         }
 
         .text {
             margin-top: 30px;
+        }
+        /* span a{
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+        } */
+        .FaishonTopic span a{
+            color: black;
+            text-decoration: none;
+            position: relative;
+        }
+        .FaishonTopic span a::after{
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ff004f;
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            transition: 0.5s;
+        }
+        .FaishonTopic span a:hover::after{
+            width: 100%;
+        }
+        .styleDiscover .discover a{
+            color: black;
+            text-decoration: none;
+            position: relative;
+        }
+        .styleDiscover .discover a::after{
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ff004f;
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            transition: 0.5s;
+        }
+        .discover:hover a::after{
+            width: 100%;
         }
     </style>
 
@@ -1022,16 +1064,18 @@
             </div>
         </div>
     </div>
+   <div class="FaishonTopic">
     <h3 class="mt-5 me-5">Top Month Sellers</h3>
     <div class="middle1 me-5">
         <span class="wo">
-            <a> Womens</a>
+            <a href="">Womens</a>
         </span>
         <span class="me">
-            Mens
+           <a href=""> Mens</a>
         </span>
-        <span class="ki">Kids</span>
+        <span class="ki"><a href="">Kids</a></span>
     </div>
+   </div>
     <!-- sandel -->
     <div class="cardFirst" id="cd">
         <div>
@@ -1148,7 +1192,9 @@
             <div style="color: gray; font-size: 20px;font-weight: bold;">$90.00</div>
         </div>
     </div>
-    <h2>Discover more</h2>
+        <div class="styleDiscover">
+            <h2 class="discover"><a href="">Discover more</a></h2>
+        </div>
     <!--long poster-->
     <div>
         <div class="long-sand"><img src="./images/long sand.jpg" width="100%" height="800">
@@ -1279,7 +1325,7 @@
             </form>
         </div>
         <div class="foot1">
-            <h2 class="shooper">Shopper.</h2>
+            <h2>Shopper.</h2>
             <div class="icon5">
                 <c class="bi bi-facebook"></c>
                 <c class="bi bi-youtube"></c>
