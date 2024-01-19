@@ -8,48 +8,66 @@
             height: 400px;
             background-repeat: no-repeat;
         }
-        /* @media only screen and (orientation:portrait) and (max-width:600px) { */
-                /* .image{
-                    background-image:url(../../public/images/WhatsApp_Image_2023-09-14_at_09.48.01-removebg-preview.png);
-                    width: 100px;
-                    height: 100px;
-                    background-repeat: no-repeat;
-                }
-                @keyframes zoom {
-            from {
-                margin-left: 80%;
-                margin-top: -10px;
-                height: 20px;
-            }
 
-            25% {
-                transform: rotate(180deg);
-            }
+/*---------------------- Animated Start Here -----------------  */
+/* 
+        .animated-Text{
+            font-size: 34px;
+            font-weight: 600;
+            min-width: 280px;
+        }
+        .animated-Text span{
+            position: relative;
+        }
+        .animated-Text span::before{
+            content: UI FUll Stack Developer;
+            color: red;
+            animation: words 20s infinite;
+        }
+        .animated-Text span::after{
+            content: "";
+            position: absolute;
+            width: calc(100% + 800px);
+            height: 100%;
+            background-color: #2f3542;
+            border-left: 2px solid #ff7f50;
+            right: -8px;
+            animation: cursor .8s infinite, typing 20s steps(14) infinite;
+        }
 
-            50% {
-                margin-top: 50px;
-                width: 100px;
-                height: 100px;
+        @keyframes cursor{
+            to{
+                border-left: 2px solid #ff7f5000;
             }
-
-            75% {
-                transition: rotate(360deg);
+        }
+        @keyframes words{
+            0%,20%{
+                content: 'UI Full Stack Developer';
+            }
+            21%,40%{
+                content: "Java Developer";
+            }
+            41%,60%{
+                content: "MERN Developer";
+            }
+            61%,80%{
+                content: "Web Developer";
+            }
+            81%,100%{
+                content: "UI/UX Developer";
+            }
+        }
+        @keyframes typing{
+            20%,35%,30%,35%,50%,55%,70%,75%,90%,95%{
+                width: 0;
+            }
+            20%,40%,45%,40%,45%,60%,65%,80%,85%{
+                width: calc(100% + 80px);
             }
         } */
-        /* #img{ */
-            /* background-image: url(../../public/images/WhatsApp_Image_2023-09-14_at_09.48.01-removebg-preview.png); */
-            /* font-weight: bold; */
-            /* width: 100px;
-            height: 100px; */
-        /* }
-        .header1{
-            width: 600p;
-        }
-        section{
-            width: 200px;
 
-        }
-        } */
+/*-----------------------  End  -------------------------*/
+
         @keyframes zoom {
             from {
                 margin-left: 140%;
