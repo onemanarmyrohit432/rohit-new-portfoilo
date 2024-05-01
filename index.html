@@ -21,7 +21,6 @@
         integrity="sha512-aUhL2xOCrpLEuGD5f6tgHbLYEXRpYZ8G5yD+WlFrXrPy2IrWBlu6bih5C9H6qGsgqnU6mgx6KtU8TreHpASprw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://kit.fontawesome.com/2287579d4d.js" crossorigin="anonymous"></script>
-    <script src="./public/script.js"></script>
 </head>
 
 <body>
@@ -345,7 +344,7 @@
                     $("#Flag").html(data);
                 }
             })
-        }
+        };
 
 
         function sendMail(){
@@ -362,26 +361,7 @@
         }).then(
             message => alert("Your Details Submitted Successfully....")
             );
-        }
-
-
-       /* const scriptURL = 'https://script.google.com/macros/s/AKfycbzuImlNPOswfsciHjsKcktX0JpiuqitXDLCWU1OonEAt49apTXjr-O5P-dM3N6ODuAGLQ/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg");
-
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Thanks To Connect with Me"
-                    setTimeout(function () {
-                        msg.innerHTML = "";
-                    }, 5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
-        */
+        };
     </script>
 </body>
 
