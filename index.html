@@ -348,23 +348,37 @@
         };
 
 
-        function sendMail(){
-            Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "chaurasiyarohit783@gmail.com",
-            Password : "20251CF964889B3520C58479B587EF035AD2",
-            To : 'theshyar7985@gmail.com',
-            From : document.getElementById("Email").value,
-            Subject : "New Contact Form",
-            Body :"Name : "+ document.getElementById("Name").value + "<br> Email : " +
-            document.getElementById("Email").value + " <br>Message : "+
-            "Mobile Number : "+ document.getElementById("Number").value +
-             "Message" + document.getElementById("Message").value
-        }).then(
-            message => alert("Your Data Submitted....")
-            );
-        };
-        
+        // function sendMail(){
+        //     Email.send({
+        //     Host : "smtp.elasticemail.com",
+        //     Username : "chaurasiyarohit783@gmail.com",
+        //     Password : "20251CF964889B3520C58479B587EF035AD2",
+        //     To : 'theshyar7985@gmail.com',
+        //     From : document.getElementById("Email").value,
+        //     Subject : "New Contact Form",
+        //     Body :"Name : "+ document.getElementById("Name").value + "<br> Email : " +
+        //     document.getElementById("Email").value + " <br>Message : "+
+        //     "Mobile Number : "+ document.getElementById("Number").value +
+        //      "Message" + document.getElementById("Message").value
+        // }).then(
+        //     message => alert("Your Data Submitted....")
+        //     );
+        // };
+
+        Email.send({
+                    Host : "smtp.elasticemail.com",
+                    Username : "chaurasiyarohit783@gmail.com",
+                    Password : "20251CF964889B3520C58479B587EF035AD2",
+                    To : 'theshyar7985@gmail.com',
+                    From : document.getElementById("Email").value,
+                    Subject : "This is the subject",
+                    Body : "Name : "+ document.getElementById("Name").value + "<br> Email : " +
+                        document.getElementById("Email").value + " <br>Message : "+
+                        "Mobile Number : "+ document.getElementById("Number").value +
+                        "Message" + document.getElementById("Message").value
+                }).then(
+                message => alert("Your message has been sent successfully!")
+                );
 
 //         function sendMail() {
 //     Email.send({
