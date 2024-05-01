@@ -367,23 +367,24 @@
         // sendMail()
 
         function sendMail() {
-        Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "chaurasiyarohit783@gmail.com", // Your Elastic Email username
-            Password: "3B31D95DA8889266D9FA37602F079AB469BB", // Your Elastic Email password
-            To: 'theshyar7985@gmail.com', // Recipient email address
-            From: document.getElementById("Email").value,
-            Subject: "New Contact Form Submission",
-            Body: "Name: " + document.getElementById("Name").value + "<br>" +
-                  "Email: " + document.getElementById("Email").value + "<br>" +
-                  "Mobile Number: " + document.getElementById("Number").value + "<br>" +
-                  "Message: " + document.getElementById("Message").value
-        }).then(
-            message => alert("Your message has been sent successfully!")
-        ).catch(
-            error => alert("Error: " + error)
-        );
-    };
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "chaurasiyarohit783@gmail.com", // Your Elastic Email username
+        Password: "3B31D95DA8889266D9FA37602F079AB469BB", // Your Elastic Email password
+        To: 'theshyar7985@gmail.com', // Recipient email address
+        From: document.getElementById("Email").value,
+        Subject: "New Contact Form Submission",
+        Body: "Name: " + document.getElementById("Name").value + "<br>" +
+              "Email: " + document.getElementById("Email").value + "<br>" +
+              "Mobile Number: " + document.getElementById("Number").value + "<br>" +
+              "Message: " + document.getElementById("Message").value
+    }).then(
+        message => alert("Your message has been sent successfully!")
+    ).catch(
+        error => alert("Error: " + error)
+    );
+}
+
     </script>
 </body>
 
