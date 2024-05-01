@@ -107,6 +107,7 @@
 
         .one:hover {
             text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 20px cyan;
+            font-size: 1rem
         }
 
         .two:hover {
