@@ -354,11 +354,11 @@
                     Password : "20251CF964889B3520C58479B587EF035AD2",
                     To : 'theshyar7985@gmail.com',
                     From : document.getElementById("Email").value,
-                    Subject : "This is the subject",
-                    Body : "Name : "+ document.getElementById("Name").value + "<br> Email : " +
-                        document.getElementById("Email").value + " <br>Message : "+
-                        "Mobile Number : "+ document.getElementById("Number").value +
-                        "Message" + document.getElementById("Message").value
+                    Subject : "New Contact Form Enquiry",
+                    Body : "Name : "+ document.getElementById("Name").value + "<br> "+
+                           "Email : " +document.getElementById("Email").value +"<br>"+
+                           "Mobile Number : "+ document.getElementById("Number").value+ "<br>"+
+                           "Message" + document.getElementById("Message").value
                 }).then(
                 message => alert("Your message has been sent successfully!")
                 );
