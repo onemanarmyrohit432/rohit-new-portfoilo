@@ -133,6 +133,13 @@
             text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 20px cyan;
         }
 
+        .eight:hover {
+            text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 20px cyan;
+        }
+        .nine:hover {
+            text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 20px cyan;
+        }
+
         .section {
             background-color: black;
             background-size: cover;

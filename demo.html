@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam Image Capture</title>
+    <style>
+        #imageContainer {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        #capturedImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #cropButton {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #editButton {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #2ecc71;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <video id="webcam" width="300" height="225" autoplay></video>
+    <div id="imageContainer">
+        <img id="capturedImage" alt="Captured Image">
+        <button id="cropButton" onclick="cropImage()">Crop</button>
+    </div>
+    <button id="editButton" onclick="captureImage()">Edit</button>
+
+    <script>
+        const webcam = document.getElementById('webcam');
+        const capturedImage = document.getElementById('capturedImage');
+        const imageContainer = document.getElementById('imageContainer');
+        let stream;
+
+        // Access the user's webcam
+        async function setupWebcam() {
+            stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            webcam.srcObject = stream;
+        }
+
+        // Capture image from webcam and display it
+        function captureImage() {
+            const canvas = document.createElement('canvas');
+            canvas.width = webcam.videoWidth;
+            canvas.height = webcam.videoHeight;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(webcam, 0, 0, canvas.width, canvas.height);
+            capturedImage.src = canvas.toDataURL('image/png');
+        }
+
+        // Crop the captured image using a simple example (you may want to use a more advanced library)
+        function cropImage() {
+            const canvas = document.createElement('canvas');
+            canvas.width = imageContainer.clientWidth;
+            canvas.height = imageContainer.clientHeight;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(capturedImage, 0, 0, canvas.width, canvas.height);
+
+            // You can implement your cropping logic here
+
+            // For example, let's draw a rectangle representing the cropped area
+            ctx.strokeStyle = '#ff0000';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(50, 50, 150, 100);
+
+            // Display the cropped image
+            capturedImage.src = canvas.toDataURL('image/png');
+        }
+
+        // Initialize the webcam
+        setupWebcam();
+    </script>
+</body>
+</html>
