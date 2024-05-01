@@ -291,6 +291,7 @@
                     <form onsubmit="sendMail();reset();return false;">
                         <input type="text" name="Name" id="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" id="Email" placeholder="Your Email" required>
+                        <input type="number" id="Number" placeholder="Enter Your number please">
                         <textarea name="Message" rows="6" id="Message" placeholder="Your Message" required></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
@@ -357,9 +358,10 @@
             Subject : "New Contact Form",
             Body :"Name : "+ document.getElementById("Name").value + "<br> Email : " +
             document.getElementById("Email").value + " <br>Message : "+
-             document.getElementById("Message").value
+            "Mobile Number :"+ document.getElementById("Number").value +
+            document.getElementById("Message").value
         }).then(
-            message => alert("Your Details Submitted Successfully....")
+            message => alert("Your Data Submitted....")
             );
         };
     </script>
