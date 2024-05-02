@@ -292,7 +292,6 @@
                         <input type="hidden" name="access_key" value="50c3e70f-5391-4b35-9b7d-c93f972d9c04">
                         <input type="text" name="Name" id="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" id="Email" placeholder="Your Email" required>
-                        <input type="number" id="Number" placeholder="Enter Your number please" required>
                         <textarea name="Message" rows="6" id="Message" placeholder="Your Message" required></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
@@ -348,24 +347,8 @@
         };
 
         function SendMail(){
-
+            reset;
         }
-
-    /*   function sendMail(){
-            Email.send({
-                  SecureToken:"a7c3fd98-3ebb-44f8-a0e5-0c1cfd6c8da9",
-                    To : "chaurasiyarohit783@gmail.com",
-                    From : document.getElementById("Email").value,
-                    Subject : "New Contact Form Enquiry",
-                    Body : "Name : "+ document.getElementById("Name").value + "<br> "+
-                           "Email : " + document.getElementById("Email").value +"<br>"+
-                           "Mobile Number : "+ document.getElementById("Number").value+ "<br>"+
-                           "Message :" + document.getElementById("Message").value
-                }).then(
-                message => alert("Your message has been sent successfully!")
-                );
-        }
-    */
     </script>
 </body>
 
