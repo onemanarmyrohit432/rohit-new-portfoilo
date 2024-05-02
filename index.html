@@ -287,7 +287,7 @@
                     <a href="./public/images/My-Resume.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form action="https://api.web3forms.com/submit" method="POST">
+                    <form action="https://api.web3forms.com/submit" method="POST" onsubmit="SendMail();reset()">
                         <h1 class="text-danger">Get In Touch</h1>
                         <input type="hidden" name="access_key" value="50c3e70f-5391-4b35-9b7d-c93f972d9c04">
                         <input type="text" name="Name" id="Name" placeholder="Your Name" required>
@@ -304,7 +304,6 @@
             <p>copyright @ 2023 . Made by <i class="fa-solid fa-heart"></i> Rohit Chaurasiya</p>
         </div>
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
         $(() => {
             $("#imgbtn").click(() => {
@@ -347,6 +346,10 @@
                 }
             })
         };
+
+        function SendMail(){
+
+        }
 
     /*   function sendMail(){
             Email.send({
